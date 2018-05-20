@@ -1,0 +1,75 @@
+
+
+.body {
+    font-family: serif;
+    color: grey;
+}
+
+ul {
+    font-family: sans-serif;   
+}
+
+u {
+    font-size: 120%;
+}
+
+strong {
+    color: #594C4C;
+}
+
+.normal {
+	text-align: left;
+	position: relative;	
+    top: 100px;
+    margin-right: 25%;
+	margin-left: 25%;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.center {
+	align-content: center;
+}
+
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	text-align: center;
+	top: 20px;
+	padding: 20px;
+	background-color: #C6871F;
+	margin-top: 30px;
+}
+
+div.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  	padding: 0px;
+  	left: 0;
+    font-family: serif;
+	}
+
+div.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: serif;
+
+}
+
+div.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+div.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
