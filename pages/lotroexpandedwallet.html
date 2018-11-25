@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="../css/index.css">
+	<title>Jordan Peterson | System: Expanded Wallet</title>  
+	<link rel="icon" type="image/png" href="../images/pageIcon.PNG" sizes="32x32" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+
+
+</head>
+
+<body>
+	<div class="sitenavigation">
+		<div class="title">
+			<h1 id="title_name"> <a href="../pages/about.html#header">Jordan Peterson</a></h1>
+		</div>
+	
+		
+	</div>
+	
+	<header id="header">
+		
+	</header>
+
+	<div class="normal">
+		<h1 class="subtitle">
+			<strong>System: Expanded Wallet</strong>
+		</h1>
+		<p>
+			<h3 style="text-align: center;">Lord of the Rings Online</h4>
+			<a href="../images/lotro_wallet.PNG" target="blank"><img src="../images/lotro_wallet.PNG" align=right class="thumbnail"></a>
+			<h4 id="tableofcontents">Table of Contents</h4>
+			<ul>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#overview">Overview</a></li>
+				<li><a href="#barter">Barter Wallet</a></li>
+				<li><a href="#crafting">Crafting Wallet</a></li>
+				<li><a href="#reputation">Reputation Wallet</a></li>
+				<li><a href="#task">Task Wallet</a></li>
+				<li><a href="#link">Link to Forum Post</a></li>
+			</ul>
+			<br><br><br><br><br><br>
+		</p>
+		<p>
+			<h4 id="introduction">Introduction: Design Philosophy and Reasoning for the System's Revamp</h4>
+			This suggestion was focused around expanding the "Wallet" that exists within the game. It is used to store currencies, and already has the potential to store probably over a hundred of them, but as the game has grown over the years, it has also gained thousands of unqiue materials, most of which only stack to a limited amount before taking another inventory space, which itself can be fairly limited. This suggestion is centered around expanding the Wallet beyond just storying (infinite) currencies, so that it could now store (infinite) materials of various types. I also worked to make sure that there were some limitations to prevent botting, as well as considered a potential route of monetization of such a system, one that I thought was pretty fair. 
+			<br><br>I also wanted to make sure that the system would have a lot of customization options, as well as making sure it would have the basic functionality of being able to deposit and withdraw items into this infinite-storage of sorts, which ordinarily only uncontrollably sucks any and all items relevant into it, currently makes it much harder, if not impossible, to clear out older, useless items and making it impossible to trade the items with other players. I listed out many of the core variables and options that would be needed for each and every type of currency and material to make sure that there would be no issues with exploitability, accidental deletion of currency bought with real-world money, and other such important considerations.			
+
+			<h4 id="overview">Overview</h4>
+
+			On the top of the wallet, there will be 4 new tabs, with the following titles: Barter, Crafting, Reputation, and Tasks.
+
+			When a given tab is selected, the contents of the box that displays what items/currencies are held will update to display the items in the selected tab. 
+
+			The individual tabs each have their own options, as I will explain below. But some of the more broad mechanical changes that will come in across-the-board are:
+			There are now three types of Currency binding: Bound, Account Shared, and Unbound. Unbound is new, and for items that are Unbound, their name will be displayed in blue (like how Account Shared stuff is displayed in green). Unbound items are also shared across the account, they are simply not bound to it.
+			There is a new button on the top of your Bag 1, “Toggle hold mode”. It is similar to the “Toggle lock mode”. While toggled, you can swap between items being marked as “Hold” and not, just like with “Lock” and not. Items marked by “Hold” will not automatically be deposited into the wallet. They must be manually deposited if you want them to go in. The “Hold” tag is there almost exclusively to prevent the issue of endless re-depositing of items that you withdraw.
+			You can now select items and categories in the wallet, and do things to the selected item (a set of options show up on the bottom of the wallet, corresponding to what’s selected; if a category is selected, category options will show up; if nothing is selected, tab settings show up).
+			When selecting an item in the wallet, you can withdraw it from the wallet. A select few cannot, namely Commendations. Doing so will give them the “Hold” tag (similar to "Lock" tag that prevents them from being sold).
+			When selecting an item in the wallet, you can choose to “Hide” the item, which will put it into a category in the tab that is always closed unless manually opened. This will help you de-clutter the wallet and keep irrelevant items out of sight without having to withdrawn/delete them.
+			When selecting an item in the wallet, you can choose to “Favorite” the item. This will put it into a “Favorites” category, which is always located at the top of the categories. allowing for easy viewing of items that you wish to track focally.
+			You can rearrange the order of Categories (except for Hidden and Favorites).
+			You can bind a hotkey to each of the 4 wallet tabs, to open to a specific one if you want to. Otherwise, opening the Wallet via hotkey or button will simply open the Barter wallet if it’s the first time opening for the session (character's login), or open the last opened one.
+			All of the custom options that you choose for a wallet can be saved and loaded, like ui layouts can be, with the commands ‘/save wallet options <id>’ and ‘/load wallet options <id>’.
+			You can drag an item entry from your wallet and put it onto a hotbar slot. This item will enable you to display how many of the given item is in the wallet at any given time (so you don’t have to keep opening to check it). For coin, it will display an icon of the highest value (gold, silver, or copper icon, and then just the number of that single currency); for example, if you have 560g50s90c, it would appear as a gold icon and have 560 on it.
+			You can ctrl+left-click to link an item to the chat directly from your wallet.
+
+			Due to the scope and complexity of this revamp, potentially requiring a huge amount of time as well as potentially being demanding on the game, I have put “(Optional)” next to many of the functions/options that could be cut without sacrificing the primary purposes of the revamp. Usually most things I label as optional are simply referring to an option that the player could be given; if the option were not given, one of the choices that I offer would be taken and simply made the only way it did things; the default option is indicated by underline.
+
+			Also, I apologize for the redundancy throughout much of the specifics. But there are a lot of considerations about specific things that I have made and show clearly, so that it would be as easy as possible to follow this as a guide for implementation. As always, I wish the Lotro Forums had a spoiler function so I could make it more clean.
+
+			Here is an example of what the new interface could look like. Feel free to ask/comment if you don’t know what something is on the image.
+
+			 (link if image doesn't work: http://imgur.com/R9Iw19z)
+
+			<h4 id="barter">Barter Wallet</h4>
+			
+			The barter tab contains all of the items that are exclusively used for bartering purposes.
+
+			Note that the Premium Wallet is still fully functional; things that are not deposited if you don’t have the Premium Wallet will still not be deposited or depositable unless you get the upgrade. Some new items will be able to fit in the Barter wallet if you have the Premium Wallet though.
+
+			Categories:
+			This would be is the default order for the categories.
+			Favorites - displays items that are manually put into the category. displays items in the category alphabetically.
+			Coin
+			Festivals and Events
+			Landscape
+			Instances and Skirmishes - holds various instance tokens that are used for various purposes
+			Equipment Tokens - holds various tokens/items that are exclusively used for bartering for specific pieces of equipment (such as the Rift’s Dazzling Emerald)
+			Taxidermy
+			Item Advancement
+			Herbalism - holds flower extracts
+			Crafting - holds crafted barter items. namely, crafted relics and HotW barter items.
+			PvMP - holds Commendations and various Sigils
+			Hidden - displays items that are manually put into the category. by default, the category is always minimized, and must be manually opened.
+
+			Tab options:
+			Automatically depositing items: Automatic or Manual - if Automatic, all items that you acquire that are not marked with the “Hold” tag will be automatically deposited, if Manual, no items are deposited automatically.
+			(Optional) Cap “Hold” Stacks: Cap or Ignore - if Cap, any incoming copies of that item will first be contributed to the stack of the item in your inventory before they are automatically deposited into the wallet, if Ignore, any new copies of the item (unless they were granted with “Hold”) will simply be deposited into the wallet.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the tab will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count.
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this tab of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the wallet will be used.
+
+			Tab management functions:
+			(Optional) Restore Default View button - Next to the Search bar at the top of the wallet, there is a button for “Expand all” and “Collapse all” for the categories. There is a new option “Restore Default,” which expands/collapses all of the categories in the tab to match the setting chosen by the player.
+			(Optional) Deposit All Non-held button - When pushed, this will deposit all items that belong in this tab if the items are not marked with “Hold”. This is mainly useful for if you have disabled the automatic depositing of items option.
+			(Optional) Deposit All button - When pushed, this will deposit all items that belong in this tab, including ones that are tagged with a “Hold” tag. There is a confirmation window on this.
+			Deposit item slot - There is a single item slot located on the bottom of the wallet. You can deposit single stacks of a item with or without a “Hold” tag on it to deposit them into the wallet.
+
+			Category options:
+			(Optional) Move up - moves the selected category up by 1. cannot go above Favorites. cannot be used on Favorites or Hidden categories.
+			(Optional) Move down - moves the selected category up by 1. cannot go below Hidden. cannot be used on Favorites or Hidden categories.
+			(Optional) Hide when zero-count - if checked Yes, this entry will not be displayed unless there is a copy of the item in the wallet, if checked No, the item will be displayed with a grey ‘0’ count. this option overrides the tab’s option for displaying items with zero-count.
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used. this option will override the tab’s choice.
+			(Optional) Default expansion: Expand or Collapse - if Expand, the category will be expanded by default, if Collapse, the category will be collapsed by default. when the wallet is opened for the first time in a session, this option determines which categories will be expanded by default. manual expanding or collapsing of the categories will persist until the session is done, overriding this choice.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this category of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the category will be used. If Lock is set, an item’s setting will not be able to override the category’s setting; the category option can override the tab’s Lock though.
+
+			Item management functions:
+			Withdraw ‘x’ - withdraw ‘x’ number of the selected items (can enter up to the max stack size to withdraw with each push). There is a ^ button to automatically set it at the maximum. several items cannot be withdrawn: Commendations.
+			Deposit ‘x’ - deposit ‘x’ number of the selected items that are in your inventory (including ones marked with the “Hold” tag). There is a ^ button to automatically set it at the maximum.
+			(Optional) Delete ‘x’ - delete ‘x’ number of the selected items. There is a ^ button to automatically set it at the maximum. several items cannot be deleted: Mithril Coins.
+
+			Item management options:
+			(Optional) Hide when zero-count - if checked Yes, this entry will not be displayed unless there is a copy of the item in the wallet, if checked No, the item will be displayed with a grey ‘0’ count. this option overrides the category’s choice.
+			(Optional) Auto-deposit - if checked Yes, new copies of this item will automatically be deposited, if Deposit, new copies of this item will not be deposited (regardless of if they have “Hold” tag or not). this option will override the tab’s choice.
+			(Optional) when Above Limit or Below Limit or No Limit ‘x’ - this option will cause any newly acquired copies of this item beyond the limit indicated to be marked with the “Hold” tag, meaning it must be manually deposited into the wallet. By default, this option is set to No Limit, meaning that item will always be auto-deposited, regardless of how many of the item is already in the wallet. If Below Limit is set, there would be a denominator beside the number, like with commendations; if a Above Limit is set, there would be a denominator beside the number, with a ‘+’ at the end of it, for example: “600/1000+”, which would mean only if 1000 of the item is in the wallet will that item be automatically deposited.
+			(Optional) Usage: Use First or Use Last or Lock - if Use First, items in wallet are used before items in inventory, if Use Last, items in wallet are used after items in inventory, if Lock, items from wallet are not used. this option will override the tab’s choice.
+			(Optional) Specialize: Favorite or Suppress or Normal - if Favorite, shifts the item to be displayed at the top of the category it is in. if Suppress, shifts the item to instead be displayed at the bottom of the category it is in. if Normal, displayed as it normally would be.
+			Category: Favorite or Hidden or Default - shifts the item to be displayed in either the “Favorites” category, “Hidden” category, or the item’s default category.
+
+			Specific notable changes from current version:
+			The “Premium Wallet” upgrade is now known as the “Premium Barter Wallet” upgrade, as it only upgrades the Barter tab in the wallet.
+			Universal Ingredient Packs are now stored in the Crafting tab of the wallet (they take up no space, something I’ll get to later, and will be automatically deposited whether you have any Crafting Wallet space or not).
+			New “Herbalism” category
+			New “PvMP” category
+			Several Taxidermy items are unbound as items, but are bound as currencies. These would be correctly adjusted, so that their wallet binding is properly Bound (white) or Unbound (blue).
+			All Hobnanigans tokens now go into the Barter tab of the wallet, their binding being Unbound. Requires Premium Barter Wallet upgrade.
+			Silver and Gold Tokens of Dol Amroth, as well as Dol Amroth - Library Tokens, now go into the Barter tab of the wallet, their binding being Unbound. Requires Premium Barter Wallet upgrade.
+			Sets of Brittle Lock-picks are now an Account Bound item/Account Shared currency that goes into the “Crafting” or “Other” category.
+			(Optional) Bags of Copper, Silver, and Gold Coins can now all be deposited into the wallet. By default, the item has the “Hold incoming” option set to Hold. They are considered Account Shared and go into the “Coin” category by default. They can be withdrawn and then sold by any character. Even though not alphabetical, the order of entries displayed in the “Coin” category are: Gold, Silver, Copper, Mithril Coins, Bag of Copper Coins, Bag of Silver Coins, Bag of Gold Coins. Requires Premium Barter Wallet upgrade.
+			(Optional) There is a new currency called “Liquid IXP”. It is a essentially a liquid form of IXP runes. You can (manually) deposit IXP runes into the wallet, and they will be converted into their value of the Liquid IXP currency (1:1 rate). You can then go to Relic-Masters and meld the Liquid IXP runes of any size, in a new Category called “IXP Rune Synthesis” or something. You must manually deposit the runes, there is no option to have this be done automatically. Requires Premium Barter Wallet upgrade to be able to deposit the runes.
+			Scraps of an Essence Reclamation Scroll and Ithilien Essence Fragments are now located in the “Item Advancement” category.
+			Flower Extracts are now located in the “Herbalism” category.
+
+			<h4 id="crafting">Crafting Wallet</h4>
+			The crafting tab contains all of the items that are usable in crafting.
+
+			The Crafting wallet requires VIP to be able to remotely withdraw and deposit items. Otherwise, you must be under the effects of the effect “Crafting Wallet Management” or have a Bank Services item in your inventory. This buff is either obtained while being around a Banker or Housing chest (it is given out like an aura or like a Crafting Station’s effect).
+
+			Whether or not you can remotely withdraw and deposit, you can still view the items and manage most of the item management options (except for the withdraw/deposit).
+
+			Most items are considered Unbound, and are therefore account shared and have a blue name.
+
+			The crafting wallet has several Upgrade purchases associated with it that are required to be able to make use of it. There is a "Basic Crafting Wallet" Upgrade, available for 995 LP, which grants you access to the crafting part of the wallet; items in the Prospecting Goods, Forestry Goods, Research, Cooking Ingredients, and Farming Supplies (only crop bundles), all have a capacity limit of 500 in this purchase; items in the Special Ingredients, Optional Ingredients, Supplier Goods, and Farming Supplies (vendor-bought items) all have unlimited capacity in this purchase. There is an upgrade available for the Prospecting Goods, Forestry Goods, Research, Cooking Ingredients categories, each priced at 495 LP that will unlock unlimited capacity for all items in the categories. There is also a Farming Supplies category upgrade, priced at 195 LP that will unlock unlimited capacity for non-vendor-bought items in this category. (To unlock all upgrades, it would cost 3170 LP. There is also a bundle package priced at 2995 LP that will unlock all of the upgrades; this can only be purchased if bought before any other upgrades.)
+
+			Categories:
+			This would be is the default order for the categories.
+			Favorites - displays items that are manually put into the category. displays items in the category alphabetically.
+			Special Ingredients - displays Universal Ingredient Packs, Universal Solvents, Legendary Fragments, Expertise Tokens, shards, compendiums, North Ithilien essence-crafting items, and Dagorlad Crafting Journals
+			Prospecting Goods - displays all ore, ingots, gemstones, polished gemstones, unprocessed prospector crit materials
+			Forestry Goods - displays all hides, leather, logs, planks, unprocessed forester crit materials
+			Research - displays all raw lore, research, unprocessed scholar crit items
+			Cooking Ingredients - displays all farmer-made produce and cook-made ingredients
+			Farming Supplies - displays seeds, water, soil, and crop bundles
+			Optional Ingredients - displays non-Dagorlad Crafting Journals and all processed crit items
+			Supplier Goods - displays any vendor-bought materials
+			Hidden - displays items that are manually put into the category. by default, the category is always minimized, and must be manually opened.
+			Tab options:
+			Automatically depositing items: Automatic or Manual - if Automatic, all items that you acquire that are not marked with the “Hold” tag will be automatically deposited, if Manual, no items are deposited automatically. Requires VIP to choose either option; without VIP, items are simply left untagged and are not deposited.
+			(Optional) Cap “Hold” Stacks: Cap or Ignore - if Cap, any incoming copies of that item will first be contributed to the stack of the item in your inventory before they are automatically deposited into the wallet, if Ignore, any new copies of the item (unless they were granted with “Hold”) will simply be deposited into the wallet.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the tab will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this tab of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the wallet will be used.
+			(Optional) Overflow Capacity tagging: Hold or Ignore - this option determines if the “Hold” tag is given to items that are looted after you meet the capacity limit for the wallet. If Hold is selected, items get the “Hold” tag, if ignore is selected, they will not get the tag. That will mean that once the capacity is no longer capped, items in your inventory would be automatically absorbed into the wallet. Requires VIP to choose either option; without VIP, items are simply left untagged and are not deposited.
+			(Optional) Display order: Item Level or Alphabetical - if Alphabetical, displays items alphabetically, if Item Level, displays items by descending item level (highest on top, with alphabetical for multiple of the same item level).
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit will be deleted.
+
+			Tab management functions:
+			(Optional) Restore Default View button - Next to the Search bar at the top of the wallet, there is a button for “Expand all” and “Collapse all” for the categories. There is a new option “Restore Default,” which expands/collapses all of the categories in the tab to match the setting chosen by the player.
+			(Optional) Deposit All Non-held button - When pushed, this will deposit all items that belong in this tab if the items are not marked with “Hold”. This is mainly useful for if you have disabled the automatic depositing of items option. Requires VIP or management permission.
+			(Optional) Deposit All button - When pushed, this will deposit all items that belong in this tab, including ones that are tagged with a “Hold” tag. There is a confirmation window on this. Requires VIP or management permission.
+			Deposit item slot - There is a single item slot located on the bottom of the wallet. You can deposit single stacks of a item with or without a “Hold” tag on it to deposit them into the wallet. Requires VIP or management permission.
+
+			Category options:
+			(Optional) Move up - moves the selected category up by 1. cannot go above Favorites. cannot be used on Favorites or Hidden categories.
+			(Optional) Move down - moves the selected category up by 1. cannot go below Hidden. cannot be used on Favorites or Hidden categories.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the category will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count. this option overrides the tab’s option for displaying items with zero-count.
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used. this option will override the tab’s choice.
+			(Optional) Default expansion: Expand or Collapse - if Expand, the category will be expanded by default, if Collapse, the category will be collapsed by default. when the wallet is opened for the first time in a session, this option determines which categories will be expanded by default. manual expanding or collapsing of the categories will persist until the session is done, overriding this choice.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this category of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the category will be used. If Lock is set, an item’s setting will not be able to override the category’s setting; the category option can override the tab’s Lock though.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit will be deleted. overrides Tab choice.
+
+			Item management functions:
+			Withdraw ‘x’ - withdraw ‘x’ number of the selected items (can enter up to the max stack size to withdraw with each push). There is a ^ button to automatically set it at the maximum. Requires VIP or management permission.
+			Deposit ‘x’ - deposit ‘x’ number of the selected items that are in your inventory (including ones marked with the “Hold” tag). There is a ^ button to automatically set it at the maximum. Requires VIP or management permission.
+			(Optional) Delete ‘x’ - delete ‘x’ number of the selected items. There is a ^ button to automatically set it at the maximum.Requires VIP or management permission.
+
+			Item management options:
+			(Optional) Hide when zero-count - if checked Yes, this entry will not be displayed unless there is a copy of the item in the wallet, if checked No, the item will be displayed with a grey ‘0’ count. this option overrides the category’s choice.
+			(Optional) Auto-deposit - if checked Yes, new copies of this item will automatically be deposited, if Deposit, new copies of this item will not be deposited (regardless of if they have “Hold” tag or not). this option will override the tab’s choice. Requires VIP to choose either option; by default, items are simply left untagged and not deposited.
+			(Optional) when Above Limit or Below Limit or No Limit ‘x’ - this option will cause any newly acquired copies of this item beyond the limit indicated to be marked with the “Hold” tag, meaning it must be manually deposited into the wallet. By default, this option is set to No Limit, meaning that item will always be auto-deposited, regardless of how many of the item is already in the wallet. If Below Limit is set, there would be a denominator beside the number, like with commendations; if a Above Limit is set, there would be a denominator beside the number, with a ‘+’ at the end of it, for example: “600/1000+”, which would mean only if 1000 of the item is in the wallet will that item be automatically deposited.Requires VIP to choose either option; by default, items are simply left untagged and not deposited.
+			(Optional) Usage: Use First or Use Last or Lock - if Use First, items in wallet are used before items in inventory, if Use Last, items in wallet are used after items in inventory, if Lock, items from wallet are not used. this option will override the tab’s choice.
+			(Optional) Specialize: Favorite or Suppress or Normal - if Favorite, shifts the item to be displayed at the top of the category it is in. if Suppress, shifts the item to instead be displayed at the bottom of the category it is in. if Normal, displayed as it normally would be.
+			Category: Favorite or Hidden or Default - shifts the item to be displayed in either the “Favorites” category, “Hidden” category, or the item’s default category.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit will be deleted. overrides Category choice.
+
+			Specific notable changes from current version:
+			Universal Ingredient Packs are now located in this tab, in the “Special Ingredients” category. They will be automatically deposited whether you have the Crafting Wallet upgrade or not.
+
+
+			<h4 id="reputation">Reputation Wallet</h4>
+			(Optional) Reputation Tab
+			The reputation tab can store all reputation-granting items.
+
+			The Reputation wallet requires a one-time upgrade purchase from the Lotro Store. It costs ~495 LP. Without the upgrade, the entire tab and all associated mechanics are gated.
+
+			All reputation items -Bound, Account Bound, or Unbound- can fit into this wallet tab, and they will keep their binding. They can all be remotely deposited/withdrawn, and they can also be consumed and bartered with directly from the wallet. 
+
+			The reputation wallet has a capacity, unlike the Barter wallet. There is a limit to how many of each item can be stored in it (not how many stacks, but individual items). That can be increased by spending LP. You would get 200 limit per item included with the purchase (495 LP). Then, you can buy more space at 200 LP for +100 count to the limit, for up to 5 upgrades; and then 250 LP for +50 count, for another 50 upgrades. Max space would be 3200 count (700 before super-high price). The limit is displayed for each item as a denominator, how there is a limit for Commendations. Overflow of items will simply not be deposited in the wallet, and will instead either go to Pending loot or your Bag (if it gets "Hold" tag will depend on your settings).
+
+			Categories:
+			This would be the default order for the categories.
+			Favorites - displays items that are manually put into the category. displays items in the category alphabetically.
+			Reputation Items - displays all reputation items.
+			Hidden - displays items that are manually put into the category. by default, the category is always minimized, and must be manually opened.
+
+			Tab options:
+			Automatically depositing items: Automatic or Manual - if Automatic, all items that you acquire that are not marked with the “Hold” tag will be automatically deposited, if Manual, no items are deposited automatically.
+			(Optional) Cap “Hold” Stacks: Cap or Ignore - if Cap, any incoming copies of that item will first be contributed to the stack of the item in your inventory before they are automatically deposited into the wallet, if Ignore, any new copies of the item (unless they were granted with “Hold”) will simply be deposited into the wallet.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the tab will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this tab of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the wallet will be used.
+			(Optional) Overflow Capacity tagging: Hold or Ignore - this option determines if the “Hold” tag is given to items that are looted after you meet the capacity limit for the wallet. If Hold is selected, items get the “Hold” tag, if ignore is selected, they will not get the tag. That will mean that once the capacity is no longer capped, items in your inventory would be automatically absorbed into the wallet.
+			(Optional) Display order: Item Level or Alphabetical - if Alphabetical, displays items alphabetically, if Item Level, displays items by descending item level (highest on top, with alphabetical for multiple of the same item level).
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted.
+
+			Tab management functions:
+			(Optional) Restore Default View button - Next to the Search bar at the top of the wallet, there is a button for “Expand all” and “Collapse all” for the categories. There is a new option “Restore Default,” which expands/collapses all of the categories in the tab to match the setting chosen by the player.
+			(Optional) Deposit All Non-held button - When pushed, this will deposit all items that belong in this tab if the items are not marked with “Hold”. This is mainly useful for if you have disabled the automatic depositing of items option.
+			(Optional) Deposit All button - When pushed, this will deposit all items that belong in this tab, including ones that are tagged with a “Hold” tag. There is a confirmation window on this.
+			Deposit item slot - There is a single item slot located on the bottom of the wallet. You can deposit single stacks of a item with or without a “Hold” tag on it to deposit them into the wallet.
+
+			Category options:
+			(Optional) Move up - moves the selected category up by 1. cannot go above Favorites. cannot be used on Favorites or Hidden categories.
+			(Optional) Move down - moves the selected category up by 1. cannot go below Hidden. cannot be used on Favorites or Hidden categories.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the category will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count. this option overrides the tab’s option for displaying items with zero-count.
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used. this option will override the tab’s choice.
+			(Optional) Default expansion: Expand or Collapse - if Expand, the category will be expanded by default, if Collapse, the category will be collapsed by default. when the wallet is opened for the first time in a session, this option determines which categories will be expanded by default. manual expanding or collapsing of the categories will persist until the session is done, overriding this choice.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this category of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the category will be used. If Lock is set, an item’s setting will not be able to override the category’s setting; the category option can override the tab’s Lock though.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted. overrides Tab choice.
+
+			Item management functions:
+			Consume ‘x’ - consume ‘x’ number of the selected items. There is a ^ button to automatically set it at the maximum. This functions identically to alt+right-clicking, so no items will be lost from overuse.
+			Withdraw ‘x’ - withdraw ‘x’ number of the selected items (can enter up to the max stack size to withdraw with each push). There is a ^ button to automatically set it at the maximum.
+			Deposit ‘x’ - deposit ‘x’ number of the selected items that are in your inventory (including ones marked with the “Hold” tag). There is a ^ button to automatically set it at the maximum.
+			(Optional) Delete ‘x’ - delete ‘x’ number of the selected items. There is a ^ button to automatically set it at the maximum.
+
+			Item management options:
+			(Optional) Hide when zero-count - if checked Yes, this entry will not be displayed unless there is a copy of the item in the wallet, if checked No, the item will be displayed with a grey ‘0’ count. this option overrides the category’s choice.
+			(Optional) Auto-deposit - if checked Yes, new copies of this item will automatically be deposited, if Deposit, new copies of this item will not be deposited (regardless of if they have “Hold” tag or not). this option will override the tab’s choice.
+			(Optional) when Above Limit or Below Limit or No Limit ‘x’ - this option will cause any newly acquired copies of this item beyond the limit indicated to be marked with the “Hold” tag, meaning it must be manually deposited into the wallet. By default, this option is set to No Limit, meaning that item will always be auto-deposited, regardless of how many of the item is already in the wallet. If Below Limit is set, there would be a denominator beside the number, like with commendations; if a Above Limit is set, there would be a denominator beside the number, with a ‘+’ at the end of it, for example: “600/1000+”, which would mean only if 1000 of the item is in the wallet will that item be automatically deposited.
+			(Optional) Usage: Use First or Use Last or Lock - if Use First, items in wallet are used before items in inventory, if Use Last, items in wallet are used after items in inventory, if Lock, items from wallet are not used. this option will override the tab’s choice.
+			(Optional) Specialize: Favorite or Suppress or Normal - if Favorite, shifts the item to be displayed at the top of the category it is in. if Suppress, shifts the item to instead be displayed at the bottom of the category it is in. if Normal, displayed as it normally would be.
+			Category: Favorite or Hidden or Default - shifts the item to be displayed in either the “Favorites” category, “Hidden” category, or the item’s default category.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted. overrides Category choice.
+
+
+			<h4 id="task">Task Wallet</h4>
+			Task tab 
+			The task tab can store all task items that have a use in tasks.
+
+			The Task wallet requires a one-time upgrade purchase from the Lotro Store. It costs ~495 LP. Without the upgrade, the entire tab and all associated mechanics are gated.
+
+			When task items are deposited into the Task wallet, they become Account Bound (meaning they all get the “Account Shared” binding in the wallet) and lose their monetary value (mainly to prevent obscene farming opportunities). When completing tasks, the items will be drawn from the task wallet if there are enough there.
+
+			Purely trash items, ones that do not have any task usage, will not be deposited into this wallet.
+
+			The task wallet has a capacity, unlike the Barter wallet. There is a limit to how many of each item can be stored in it (not how many stacks, but individual items). That can be increased by spending LP. You would get 200 limit per item included with the initial purchase (495 LP). Then, you can buy more space at 200 LP for +100 count to the limit, for up to 5 upgrades; and then 250 LP for +50 count to the limit, for another 50 upgrades. Max space, per item, would be 3200 count (700 before super-high price). The limit is displayed for each item as a denominator, how there is a limit for Commendations. Overflow of items will simply not be deposited in the wallet, and will instead either go to Pending loot or your Bag (if it gets "Hold" tag will depend on your settings). 
+
+
+			Categories:
+			This would be the default order for the categories.
+			Favorites - displays items that are manually put into the category. displays items in the category alphabetically.
+			Task Items - displays all task-accepted task items.
+			Hidden - displays items that are manually put into the category. by default, the category is always minimized, and must be manually opened.
+
+			Tab options:
+			Automatically depositing items: Automatic or Manual - if Automatic, all items that you acquire that are not marked with the “Hold” tag will be automatically deposited, if Manual, no items are deposited automatically.
+			(Optional) Cap “Hold” Stacks: Cap or Ignore - if Cap, any incoming copies of that item will first be contributed to the stack of the item in your inventory before they are automatically deposited into the wallet, if Ignore, any new copies of the item (unless they were granted with “Hold”) will simply be deposited into the wallet.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the tab will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this tab of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the wallet will be used.
+			(Optional) Overflow Capacity tagging: Hold or Ignore - this option determines if the “Hold” tag is given to items that are looted after you meet the capacity limit for the wallet. If Hold is selected, items get the “Hold” tag, if ignore is selected, they will not get the tag. That will mean that once the capacity is no longer capped, items in your inventory would be automatically absorbed into the wallet.
+			(Optional) Display order: Item Level or Alphabetical - if Alphabetical, displays items alphabetically, if Item Level, displays items by descending item level (highest on top, with alphabetical for multiple of the same item level).
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted.
+
+			Tab management functions:
+			(Optional) Restore Default View button - Next to the Search bar at the top of the wallet, there is a button for “Expand all” and “Collapse all” for the categories. There is a new option “Restore Default,” which expands/collapses all of the categories in the tab to match the setting chosen by the player.
+			(Optional) Deposit All Non-held button - When pushed, this will deposit all items that belong in this tab if the items are not marked with “Hold”. This is mainly useful for if you have disabled the automatic depositing of items option.
+			(Optional) Deposit All button - When pushed, this will deposit all items that belong in this tab, including ones that are tagged with a “Hold” tag. There is a confirmation window on this.
+			Deposit item slot - There is a single item slot located on the bottom of the wallet. You can deposit single stacks of a item with or without a “Hold” tag on it to deposit them into the wallet.
+
+			Category options:
+			(Optional) Move up - moves the selected category up by 1. cannot go above Favorites. cannot be used on Favorites or Hidden categories.
+			(Optional) Move down - moves the selected category up by 1. cannot go below Hidden. cannot be used on Favorites or Hidden categories.
+			(Optional) Hide when zero-count - if checked Yes, no entries in the category will be displayed unless the entry has a count of at least 1 in the wallet, if checked No, all entries with a count of 0 in the tab will be displayed with a grey ‘0’ count. this option overrides the tab’s option for displaying items with zero-count.
+			(Optional) Zero-count position: Bottom or Normal - if Bottom, all of the zero-count entries are organized by item level or alphabetical as if they were a category themselves, at the bottom of the selected category, if Normal, zero-count entries are displayed in-line as they would be if there were items. the “Hide when zero-count” option must be No in order for this option to be set to used. this option will override the tab’s choice.
+			(Optional) Default expansion: Expand or Collapse - if Expand, the category will be expanded by default, if Collapse, the category will be collapsed by default. when the wallet is opened for the first time in a session, this option determines which categories will be expanded by default. manual expanding or collapsing of the categories will persist until the session is done, overriding this choice.
+			(Optional) Usage: Use First or Use Last or Lock - if set to Use First, items in this category of the wallet will be used before using items in your inventory, if set to Use Last, they will be used only if no items are in your inventory, if set to Lock, no items in the category will be used. If Lock is set, an item’s setting will not be able to override the category’s setting; the category option can override the tab’s Lock though.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted. overrides Tab choice.
+
+			Item management functions:
+			Withdraw ‘x’ - withdraw ‘x’ number of the selected items (can enter up to the max stack size to withdraw with each push). There is a ^ button to automatically set it at the maximum.
+			Deposit ‘x’ - deposit ‘x’ number of the selected items that are in your inventory (including ones marked with the “Hold” tag). There is a ^ button to automatically set it at the maximum.
+			(Optional) Delete ‘x’ - delete ‘x’ number of the selected items. There is a ^ button to automatically set it at the maximum.
+
+			Item management options:
+			(Optional) Hide when zero-count - if checked Yes, this entry will not be displayed unless there is a copy of the item in the wallet, if checked No, the item will be displayed with a grey ‘0’ count. this option overrides the category’s choice.
+			(Optional) Auto-deposit - if checked Yes, new copies of this item will automatically be deposited, if Deposit, new copies of this item will not be deposited (regardless of if they have “Hold” tag or not). this option will override the tab’s choice.
+			(Optional) when Above Limit or Below Limit or No Limit ‘x’ - this option will cause any newly acquired copies of this item beyond the limit indicated to be marked with the “Hold” tag, meaning it must be manually deposited into the wallet. By default, this option is set to No Limit, meaning that item will always be auto-deposited, regardless of how many of the item is already in the wallet. If Below Limit is set, there would be a denominator beside the number, like with commendations; if a Above Limit is set, there would be a denominator beside the number, with a ‘+’ at the end of it, for example: “600/1000+”, which would mean only if 1000 of the item is in the wallet will that item be automatically deposited.
+			(Optional) Usage: Use First or Use Last or Lock - if Use First, items in wallet are used before items in inventory, if Use Last, items in wallet are used after items in inventory, if Lock, items from wallet are not used. this option will override the tab’s choice.
+			(Optional) Specialize: Favorite or Suppress or Normal - if Favorite, shifts the item to be displayed at the top of the category it is in. if Suppress, shifts the item to instead be displayed at the bottom of the category it is in. if Normal, displayed as it normally would be.
+			Category: Favorite or Hidden or Default - shifts the item to be displayed in either the “Favorites” category, “Hidden” category, or the item’s default category.
+			(Optional) Overflow management: Bag or Pending Loot or Bag & "Hold" or Delete - if Bag, items beyond the capacity limit for this item will be be stored in the bag (if there's room) without a "Hold" tag, if Pending Loot, items beyond the capacity limit for this item will be left in the Pending Loot inventory, if Bag & "Hold", items beyond the capacity limit for this item will go to your bag (if there's room) and be marked with the "Hold" tag, if Delete, items beyond the capacity limit for this item will be deleted. overrides Category choice.
+
+
+			<h4 id="link">Link to Forum Post</h4>
+			<i>Unfortunately, the Lord of the Rings Online forum website was changed after I posted this, so some of the formatting that I had done either may not work or may not look as good now. If the website just has a white background with a blue bar and small game icon on the top, I'd recommend going to the very bottom of the page and selecting "Full Site", which may display a more ideal format for viewing this post.</i>
+			<br><br><a href="https://www.lotro.com/forums/showthread.php?652902-Wallet-Revamp-and-Expansion&p=7711885&mode=linear#post7711885" target="blank">Link</a> to the original forum post.
+		</p>
+	</div>
+	
+	<!-- navbar code start -->
+		<div class="navbar" id="navbarTop">	
+			
+			<div class="dropdown">
+			    <button class="dropbtnpadded">
+			    	<a href="../pages/about.html#header">About Me <i class="fa fa-caret-down"></i></a>
+			    </button>
+			    <div class="dropdown-content">
+					<a href="../pages/about.html#introduction">Introduction</a>
+					<a href="../pages/about.html#goals">Goals</a>
+					<a href="../pages/about.html#off-the-clock">Off The Clock</a>
+
+			    </div>
+		  	</div> 
+		  	<div class="dropdown">
+			    <button class="dropbtnpadded">
+			    	<a>Projects <i class="fa fa-caret-down"></i></a>
+			    </button>
+			    <div class="dropdown-content">
+					<a href="../pages/suggestedsystems.html#header">Suggested Systems</a>
+					<a href="../pages/forestofsharill.html#header">Video Game: The Forest of Sharill</a>
+					<a href="../pages/astrollthroughthewoods.html#header">Animation: A Stroll through the Woods</a>
+					<a href="../pages/castlesiege.html#header">Board Game: Castle Siege</a>
+					<a href="../pages/arctictraveler.html#header">Video Game: Arctic Traveler</a>
+					<a href="../pages/stillwesit.html#header">Escape Room: Still We Sit.</a>
+			    </div>
+		  	</div> 
+			<div class="dropdown">
+			    <button class="dropbtnpadded">
+			    	<a href="../pages/experience.html#header">Experience <i class="fa fa-caret-down"></i></a>
+			    </button>
+			    <div class="dropdown-content">
+					<a href="../pages/experience.html#jobs">Jobs</a>
+					<a href="../pages/experience.html#courses">Courses</a>
+					<a href="../pages/experience.html#skills">Skills</a>
+			    </div>
+		  	</div> 
+		  	<div class="dropdown">
+			    <button class="dropbtnpadded">
+					<a href="../pages/resume.html#header">Resume</a>		
+			    </button>
+			    <div class="dropdown-content">
+					
+			    </div>
+		  	</div> 
+		  	<div class="dropdown">
+			    <button class="dropbtnpadded">
+					<a href="../pages/contact.html#header">Contact</a>
+			    </button>
+			    <div class="dropdown-content">
+					
+			    </div>
+		  	</div> 
+		</div>
+		<!-- navbar code end -->
+
+	<footer class="footer">
+	  	<p>Created by Jordan Peterson 2018 <a href="mailto:jordanpete24@gmail.com">Email</a></p>
+	</footer> 
+	<div class="navBottom" id="navBottom">
+			<a href="#header">Return to top of page</a>				
+	</div>
+</body>
