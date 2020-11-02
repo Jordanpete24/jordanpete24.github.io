@@ -81,11 +81,11 @@ a.boxlink {
     overflow: visible;
     background-color: #333;
     font-family: serif, Arial, Helvetica, sans-serif;
-    opacity: .4;
+    opacity: 1;
     padding-top: 0px;
     padding-bottom: 0px;
-    top: 7%;
-    bottom: 88%;
+    top: 8%;
+    bottom: 87%;
     left: 0;
     width: 100%;
     position: fixed;
