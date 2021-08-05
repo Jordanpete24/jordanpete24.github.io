@@ -1,0 +1,253 @@
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Jordan Peterson | New Navbar</title>    
+    <link rel="icon" type="image/png" href="../images/pageIcon.png" sizes="32x32" />
+
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../css/base.css"> <!-- Manages the style of basic content structure elements -->
+    <link rel="stylesheet" href="../css/dynamic.css"> <!-- Manages the style of elements that can change based on window conditions -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="../css/websiteNavbar.css"> <!-- Manages the style of website's navbar -->
+    <link rel="stylesheet" href="../css/contentSidebar.css"> <!-- Manages the style of the content sidebar-->
+    <link rel="stylesheet" href="../css/imagegallery.css"> <!-- Manages the style of the photo gallery's-->
+    <link rel="stylesheet" href="../css/dynamicWebsiteNavbar.css"> <!-- Manages the style of the photo gallery's -->
+
+    <script type="text/javascript" src="../js/contentSidebar.js"></script> <!-- Manages the dynamic population of the content sidebar-->
+    <script type="text/javascript" src="../js/imagegallery.js"></script> <!-- Manages the functionality and population of the photo gallery-->  
+    <script type="text/javascript" src="../js/dynamic.js"></script> <!-- Manages the functionality and population of the photo gallery--> 
+    <!-- Removes the initial loading delay/animation of the navbar element, and other things -->
+  	<script>var NOAB = (function () {return {error: function (t) {console.log("Error");const scriptUrl = 'https://cdn.carbonads.com/carbon.js?serve=CK7DEKQ7&placement=w3bitscom';loadScript(scriptUrl, document.querySelector("#_gads"), '_carbonads_js', document.querySelector("#_gads"), document.querySelector("#_gads_html"), document.querySelector("#_gads_inline"));},success: function (t) {console.log("Success");}};})();const loadScript = (source, beforeEl, id = null, removeEl = null, removeHTML = null, removeJS = null, removeCSS = null, async = true, defer = true) => {return new Promise((resolve, reject) => {let script = document.createElement('script');const prior = beforeEl || document.getElementsByTagName('script')[0];script.async = async;script.defer = defer;if (id) script.id = id;function onloadHander(_, isAbort) {if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {script.onload = null;script.onreadystatechange = null;script = undefined;if (isAbort) {reject();} else {if (removeEl) removeEl.parentNode.removeChild(removeEl);if (removeHTML) removeHTML.parentNode.removeChild(removeHTML);if (removeJS) removeJS.parentNode.removeChild(removeJS);if (removeCSS) removeCSS.parentNode.removeChild(removeCSS);resolve();}}}script.onload = onloadHander;script.onreadystatechange = onloadHander;script.src = source;prior.parentNode.insertBefore(script, prior);});}
+    </script>
+
+  </head>
+  <body>
+    
+    <div class="websiteNavbar"> <!-- A table for all of the elements on the navbar -->
+      <ul style="position: fixed; max-width: 100%; max-height:100%; text-align: center; margin-left: auto; margin-right: auto; width: auto; display: block;" hidden>
+        <!--RIGHT 30%: Website page navigation-->
+        <li style=" top: 0%; bottom: 93%; left: 0%; right: 30%; display: block;">
+
+        </li>
+        <!--CENTER 40%: Website title-->
+        <li style="position: fixed; top: 0%; bottom: 93%; left: 30%; right: 70%; display: block;">
+          <a href="../pages/about.html#header"><img src="../images/websiteLogoJordanPeterson.png" style="max-width:100%; max-height:100%; text-align: center; margin-left: auto; margin-right: auto; width: auto; display: block;"></img></a>
+        </li>
+        <!--LEFT 30%: Social media links-->
+        <li style="position: fixed; top: 0%; bottom: 93%; left: 70%; right: 100%; display: block;">
+
+        </li>
+      </ul>   
+
+        <!--CENTER 28%: Website title-->
+        <a href="../pages/about.html#header"><img src="../images/websiteLogoJordanPeterson.png" style="max-width:100%; max-height:100%; text-align: center; margin-left: auto; margin-right: auto; width: auto; display: block;"></img></a>
+        <!--RIGHT 36%: Website page navigation-->
+        <nav id="menu">
+          <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+          <input type="checkbox" id="tm">
+          <ul class="main-menu cf">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>    
+            <li><a href="#">Games
+                  <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                  </a>
+                  <input type="checkbox" id="sm8">
+                </a>
+                <ul class="sub-menu">
+                  <li><a href="../pages/towerofbabel.html#header"><strong>Tower of Babel</strong> (2021) <br><i>Video Game, 3D, RPG</i></a></li>
+                  <li><a href="../pages/penumbra.html#header"><strong>Penumbra</strong> (2020) <br><i>Video Game, 3D, VR</i></a></li>
+                  <li><a href="../pages/castlesiege.html#header"><strong>Castle Siege</strong> (2018) <br><i>Board Game, Cards, PvP</i></a></li>
+                  <li><a href="../pages/stillwesit.html#header"><strong>Still We Sit</strong> (2018) <br><i>Escape Room, Educational, Historical</i></a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Resumes
+                  <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm9">▾</label>
+                  </a>
+                  <input type="checkbox" id="sm9">
+                </a>
+                <ul class="sub-menu">
+                  <li><a href="">General</a></li>
+                  <li><a href="">Game Design</a></li>
+                  <li><a href="">Content Design</a></li>
+                  <li><a href="">Systems Design and Programming</a></li>
+                  <li><a href="">Gameplay Programming</a></li>
+                  <li><a href="">Design Tools Programming</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Contact</a></li>
+            
+          </ul>
+        </nav>  
+        <!--LEFT 36%: Social media links-->
+        
+        <a href="https://www.linkedin.com/in/jordan-l-peterson/" title="View Jordan Peterson's page on LinkedIn" hidden><img src="../images/LI-In-Bug.png" style="max-width:100%; max-height:100%; align-content: right; margin-left: auto; margin-right: 0; display: block;"></a>
+    </div>
+
+    <div class="wrapper"></div>
+
+    <header id="header"></header> 
+
+    
+    <div class="normal hide-side-margins-on-mobile scale-header-gap-on-mobile">
+      <h1 class="subtitle">
+        <strong>Tower of Babel</strong>
+      </h1>
+      <h1 class="contentSubtitle" id="Project Overview" hidden></h1>
+      <h1 class="contentSubtitle" id="Introduction" style="padding: 0px;">Introduction</h1>
+      <p>In this single-player Action Adventure RPG, the player grows in power as they ascend the mystical Tower of Babel. Hoping to bring about an end to the world's plagues and suffering, the player must defeat the monstrous and powerful creatures that have infested the tower as they make their way to its peak.</p>
+
+      <h1 class="contentSubtitle" id="Features">
+        <strong>Features</strong>
+      </h1>
+      <table style="padding: 2px; display: block; margin-left: 10%; margin-right: 10%">
+        <tr><br><span>&#8226;</span>   Climb the Tower's many Floors, each featuring distinct Landscapes and Monsters
+        <tr><br><span>&#8226;</span>   Fight Monsters and Dangerous Bosses in Turn-Based Combat
+        <tr><br><span>&#8226;</span>   Recruit and Train Companions
+        <tr><br><span>&#8226;</span>   Collect Weapons and Items with Powerful Abilities
+        <tr><br><span>&#8226;</span>   Learn about the World and its People by Completing Quests
+        <tr><br><span>&#8226;</span>   Find Hidden Treasures
+      </table>
+      
+      <h1 class="contentSubtitle" id="Photo Gallery">
+        <strong>Photo Gallery</strong>
+      </h1>
+      <!-- Container for the image gallery -->
+      <div class="container">
+
+        <!-- Full-width images with number text -->
+        <!-- Make first image visible by default -->
+        <div class="mySlides" style="display: block">
+
+          <div class="numbertext">1 / 6</div>
+            <img src="../images/tob_tutorial.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="../images/tob_cavern.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="../images/tob_valley.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="../images/tob_eden.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="../images/tob_character_management.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="../images/tob_combat.jpg" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1, document)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, document)">&#10095;</a>
+
+        <!-- Image text 
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>  -->        
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_tutorial.jpg" style="width:100%" onclick="currentSlide(1, document)" alt="Level: Tutorial">
+          </div>
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_cavern.png" style="width:100%" onclick="currentSlide(2, document)" alt="Level: Cavern">
+          </div>
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_valley.png" style="width:100%" onclick="currentSlide(3, document)" alt="Level: Valley">
+          </div>
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_eden.png" style="width:100%" onclick="currentSlide(4, document)" alt="Level: Eden">
+          </div>
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_character_management.jpg" style="width:100%" onclick="currentSlide(5, document)" alt="Character Management">
+          </div>
+          <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+            <img class="demo cursor" src="../images/tob_combat.jpg" style="width:100%" onclick="currentSlide(6, document)" alt="Combat Encounters">
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <h1 class="contentSubtitle" id="Gameplay Footage">
+        <strong>Gameplay Footage</strong>
+      </h1>
+      <p align="center">
+        <iframe width="800" height="530" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      --> 
+
+      <h1 class="contentSubtitle" id="Download Links">
+        <strong>Download Links</strong>
+      </h1>
+      <p align="center" >
+        <iframe class="hide-on-mobile" frameborder="0" src="https://itch.io/embed/945054?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="552" height="167"><a href="https://othron.itch.io/tower-of-babel">Tower of Babel</a></iframe>
+        <iframe class="show-on-mobile" frameborder="0" src="https://itch.io/embed/945054?dark=true" width="208" height="167"><a href="https://othron.itch.io/tower-of-babel">Tower of Babel by Jordan, TheRamenGod, DrewAvery, Cristina</a></iframe>
+      </p>
+      
+      
+      <h1 class="contentSubtitle" id="Collaborators">
+        <strong>Collaborators</strong>
+      </h1>
+
+      <h1 class="contentSubtitle" id="My Involvement" hidden></h1>
+
+      <h1 class="contentSubtitle" id="Contributions & Roles">
+        <strong>Contributions & Roles</strong>
+      </h1>
+
+      <h1 class="contentSubtitle" id="Major Achievements">
+        <strong>Major Achievements</strong>
+      </h1>
+      
+      <h1 class="contentSubtitle" id="Skills Developed">
+        <strong>Skills Developed</strong> <!-- Development Environment -->
+      </h1>   
+
+      <h1 class="contentSubtitle" id="Postmortem Reflection">
+        <strong>Postmortem Reflection</strong>
+      </h1>
+      
+    </div>
+        
+    <div>
+
+    </div>
+
+    <footer class="footer">
+        <p>Created by Jordan Peterson 2021 <a href="mailto:jordanpete24@gmail.com">Email</a></p>
+    </footer>
+      
+    <!-- Side navigation; populated at runtime by contentSidebar.js -->
+    <div class="contentNavBar hide-on-mobile"></div>
+
+    <div class="hide-on-mobile">
+      <!--Navbar title : start
+      <div class="websiteNavbar">
+        <h1 id="title_name"> <a href="../pages/about.html#header">Jordan Peterson</a></h1>
+      </div>-->
+    </div>
+  </body>
+  <footer>
+    <script>    
+      populateContentSidebar(document.getElementsByClassName("contentSubtitle"), document.getElementsByClassName("contentNavBar")[0], document);    
+      showSlides(1,document);
+    </script>
+  </footer>
+</html>
