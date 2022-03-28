@@ -21,8 +21,8 @@
     :target:before {
     content:"";
     display:block;
-    height:75px; /* fixed header height*/
-    margin:-75px 0 0; /* negative fixed header height */
+    height:70px; /* fixed header height*/
+    margin:-70px 0 0; /* negative fixed header height */
     }
 }
 /* On windows/screens that are less than or equal to 859px, do the following to the content labeled with the following classes: */
@@ -48,7 +48,7 @@
     :target:before {
     content:"";
     display:block;
-    height:6%; /* fixed header height*/
-    margin:6% 0 0; /* negative fixed header height */
+    height:85px; /* fixed header height*/
+    margin:-85px 0 0; /* negative fixed header height */
     }
 }

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+	<title>Jordan Peterson | Tower of Babel</title>  
+	<link rel="icon" type="image/png" href="../images/pageIcon.png" sizes="32x32" />
+
+	<link rel="stylesheet" href="../css/base.css"> <!-- Manages the style of basic content structure elements -->
+	<link rel="stylesheet" href="../css/dynamic.css"> <!-- Manages the style of elements that can change based on window conditions -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+	<link rel="stylesheet" href="../css/websiteNavbar.css"> <!-- Manages the style of website's navbar -->
+	<link rel="stylesheet" href="../css/contentSidebar.css"> <!-- Manages the style of the content sidebar-->
+	<link rel="stylesheet" href="../css/imagegallery.css"> <!-- Manages the style of the photo gallery's-->
+
+	<script type="text/javascript" src="../js/contentSidebar.js"></script> <!-- Manages the dynamic population of the content sidebar-->
+	<script type="text/javascript" src="../js/imagegallery.js"></script> <!-- Manages the functionality and population of the photo gallery-->	
+	<script type="text/javascript" src="../js/dynamic.js"></script> <!-- Manages the functionality and population of the photo gallery-->	
+</head>
+
+<body>
+	<header id="header">		
+	</header>	
+	<div class="normal hide-side-margins-on-mobile scale-header-gap-on-mobile">
+		<h1 class="subtitle">
+			<strong>Tower of Babel</strong>
+		</h1>
+		<h1 class="contentSubtitle" id="Project Overview" hidden></h1>
+		<h1 class="contentSubtitle" id="Introduction" style="padding: 0px;">Introduction</h1>
+		<p>In this single-player Action Adventure RPG, the player grows in power as they ascend the mystical Tower of Babel. Hoping to bring about an end to the world's plagues and suffering, the player must defeat the monstrous and powerful creatures that have infested the tower as they make their way to its peak.</p>
+
+		<h1 class="contentSubtitle" id="Features">
+			<strong>Features</strong>
+		</h1>
+		<table style="padding: 2px; display: block; margin-left: 10%; margin-right: 10%">
+			<tr><br><span>&#8226;</span>   Climb the Tower's many Floors, each featuring distinct Landscapes and Monsters
+			<tr><br><span>&#8226;</span>   Fight Monsters and Dangerous Bosses in Turn-Based Combat
+			<tr><br><span>&#8226;</span>   Recruit and Train Companions
+			<tr><br><span>&#8226;</span>   Collect Weapons and Items with Powerful Abilities
+			<tr><br><span>&#8226;</span>   Learn about the World and its People by Completing Quests
+			<tr><br><span>&#8226;</span>   Find Hidden Treasures
+		</table>
+		
+		<h1 class="contentSubtitle" id="Photo Gallery">
+			<strong>Photo Gallery</strong>
+		</h1>
+		<!-- Container for the image gallery -->
+		<div class="container">
+
+		  <!-- Full-width images with number text -->
+		  <!-- Make first image visible by default -->
+		  <div class="mySlides" style="display: block">
+
+		    <div class="numbertext">1 / 6</div>
+		      <img src="../images/tob_tutorial.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">2 / 6</div>
+		      <img src="../images/tob_cavern.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">3 / 6</div>
+		      <img src="../images/tob_valley.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">4 / 6</div>
+		      <img src="../images/tob_eden.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">5 / 6</div>
+		      <img src="../images/tob_character_management.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">6 / 6</div>
+		      <img src="../images/tob_combat.jpg" style="width:100%">
+		  </div>
+
+		  <!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1, document)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1, document)">&#10095;</a>
+
+		  <!-- Image text 
+		  <div class="caption-container">
+		    <p id="caption"></p>
+		  </div>  -->        
+
+		  <!-- Thumbnail images -->
+		  <div class="row">
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_tutorial.jpg" style="width:100%" onclick="currentSlide(1, document)" alt="Level: Tutorial">
+		    </div>
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_cavern.png" style="width:100%" onclick="currentSlide(2, document)" alt="Level: Cavern">
+		    </div>
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_valley.png" style="width:100%" onclick="currentSlide(3, document)" alt="Level: Valley">
+		    </div>
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_eden.png" style="width:100%" onclick="currentSlide(4, document)" alt="Level: Eden">
+		    </div>
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_character_management.jpg" style="width:100%" onclick="currentSlide(5, document)" alt="Character Management">
+		    </div>
+		    <div class="column" style="width:16.67%; width:calc(1/6 * 100%)">
+		      <img class="demo cursor" src="../images/tob_combat.jpg" style="width:100%" onclick="currentSlide(6, document)" alt="Combat Encounters">
+		    </div>
+		  </div>
+		</div>
+
+		<!--
+		<h1 class="contentSubtitle" id="Gameplay Footage">
+			<strong>Gameplay Footage</strong>
+		</h1>
+		<p align="center">
+			<iframe width="800" height="530" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</p>
+		-->	
+
+		<h1 class="contentSubtitle" id="Download Links">
+			<strong>Download Links</strong>
+		</h1>
+		<p align="center" >
+			<iframe class="hide-on-mobile" frameborder="0" src="https://itch.io/embed/945054?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="552" height="167"><a href="https://othron.itch.io/tower-of-babel">Tower of Babel</a></iframe>
+			<iframe class="show-on-mobile" frameborder="0" src="https://itch.io/embed/945054?dark=true" width="208" height="167"><a href="https://othron.itch.io/tower-of-babel">Tower of Babel by Jordan, TheRamenGod, DrewAvery, Cristina</a></iframe>
+		</p>
+		
+		
+		<h1 class="contentSubtitle" id="Collaborators">
+			<strong>Collaborators</strong>
+		</h1>
+
+		<h1 class="contentSubtitle" id="My Involvement" hidden></h1>
+
+		<h1 class="contentSubtitle" id="Contributions & Roles">
+			<strong>Contributions & Roles</strong>
+		</h1>
+
+		<h1 class="contentSubtitle" id="Major Achievements">
+			<strong>Major Achievements</strong>
+		</h1>
+		
+		<h1 class="contentSubtitle" id="Skills Developed">
+			<strong>Skills Developed</strong> <!-- Development Environment -->
+		</h1>		
+
+		<h1 class="contentSubtitle" id="Postmortem Reflection">
+			<strong>Postmortem Reflection</strong>
+		</h1>
+		
+	</div>
+		
+	<div>
+
+	</div>
+
+	<footer class="footer">
+	  	<p>Created by Jordan Peterson 2021 <a href="mailto:jordanpete24@gmail.com">Email</a></p>
+	</footer>
+	
+	<!-- Side navigation; populated at runtime by contentSidebar.js -->
+	<div class="contentNavBar hide-on-mobile"></div>
+
+	<!--Navbar : start-->
+	<!-- Non-mobile Navbar design : start -->
+	<div class="hide-on-mobile">
+		<!--Navbar title : start-->
+		<div class="websiteNavbar">
+			<h1 id="title_name"> <a href="../pages/about.html#header">Jordan Peterson</a></h1>
+		</div>
+		<!-- Navbar banner image <img src="../images/faded_banner.png" style="position: static; text-align: left;"> -->
+		<!--Navbar title : end-->
+
+		<!-- navbar code : start -->
+		<div class="navbar" id="navbarTop">		
+			<div class="dropdown">
+			    <button class="dropbtnpadded">
+			    	<a href="../pages/about.html#header">About Me</a>
+			    </button>
+		  	</div> 
+		  	<div class="dropdown">
+			    <button class="dropbtnpadded">
+			    	<a>Games <i class="fa fa-caret-down"></i></a>
+			    </button>
+			    <div class="dropdown-content">
+			    	<a href="../pages/towerofbabel.html#header"><strong>Tower of Babel</strong> (2021) [Video Game] [3D] </a>
+			    	<!-- <a href="../pages/messisnatura.html#header">Video Game: Whispers in the Vale (2020)</a> -->
+			    	<!-- <a href="../pages/messisnatura.html#header">Video Game: CRASHED: Survival (2020)</a> -->
+			    	<a href="../pages/penumbra.html#header"><strong>Penumbra</strong> (2020) [Video Game] [3D] [VR]</a>
+			    	<!-- <a href="../pages/familyremains.html#header">Video Game: Family Remains (VR)</a> -->
+					<!-- <a href="../pages/ultimatedodgeball.html#header">Video Game: Ultimate Dodgeball</a> -->
+					<!-- <a href="../pages/messisnatura.html#header">Video Game: Messis Natura (2019)</a> -->
+					<!-- <a href="../pages/mightymysids.html#header">Video Game: Mighty Mysids (2019)</a> -->
+					<!-- <a href="../pages/forestofsharill.html#header">Video Game: The Forest of Sharill (2018)</a> -->
+					<!-- <a href="../pages/arctictraveler.html#header">Video Game: Arctic Traveler (2018)</a> -->
+					<!-- <a href="../pages/shrineslevel.html#header">Video Game: Shrines (Single Level)</a> -->
+					<a href="../pages/castlesiege.html#header"><strong>Castle Siege</strong> (2018) [Board Game]</a>
+					<a href="../pages/stillwesit.html#header"><strong>Still We Sit</strong> (2018) [Escape Room]</a>
+					<!-- <a href="../pages/astrollthroughthewoods.html#header">Animation: A Stroll through the Woods (2018)</a> -->
+					<!-- <a href="../pages/slimetime.html#header">Designer Toolkit: Slime Time (2020)</a> -->
+					<a href="../pages/suggestedsystems.html#header"><strong>Suggested Live Game Updates</strong> [Systems]</a>
+			    </div>
+		  	</div> 			
+		  	<div class="dropdown">
+			    <!--<button class="dropbtnpadded">
+					<a href="../pages/resume.html#header">Resume</a>	 	
+			    </button>-->
+			    <div class="dropdown-content">
+					
+			    </div>
+		  	</div> 
+		  	<div class="dropdown">
+			    <button class="dropbtnpadded">
+					<a href="../pages/contact.html#header">Contact</a>
+			    </button>
+			    <div class="dropdown-content">
+					
+			    </div>
+		  	</div> 
+		</div>
+		<!-- navbar code : end -->
+	</div>	
+	<!-- Non-mobile Navbar design : end -->
+
+	<!-- Mobile Navbar design : start -->
+	<div class="show-on-mobile">
+		<!-- Source: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Top Navigation Menu -->
+		<div class="websiteNavbar topnav">
+		  <a href="../pages/about.html#header"> Jordan Peterson</a>
+		  <!-- Navigation links (hidden by default) -->
+		  <div id="myLinks">
+		    <a href="#news">News</a>
+		    <a href="#contact">Contact</a>
+		    <a href="#about">About</a>
+		  </div>
+		  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+		  <a href="javascript:void(0);" class="icon" onclick="toggleElementDisplay(document, 'myLinks')">
+		    <i class="fa fa-bars"></i>
+		  </a>
+		</div>
+
+
+	</div>
+	<!-- Mobile Navbar design : end -->
+
+	<!--<div class="navBottom" id="navBottom">
+			<a href="#header">Return to top of page</a>				
+	</div>-->
+</body>
+
+<footer>
+	<script>		
+		populateContentSidebar(document.getElementsByClassName("contentSubtitle"), document.getElementsByClassName("contentNavBar")[0], document);		
+		showSlides(1,document);
+	</script>
+</footer>

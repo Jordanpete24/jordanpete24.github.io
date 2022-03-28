@@ -14,7 +14,7 @@ tag on the category <h1> element.*/
   margin-right: 77%;
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 0; /* Stays on the main level of the page, below top navbar dropdown menus, but in front of background. WAS: 1 */
-  top: 15%; /* The element will not be displayed above the top 15% of the page.*/
+  top: 10%; /* The element will not be displayed above the top 15% of the page.*/
   bottom: 5%; /* The element will not be displayed below the bottom 5% of the page.*/
   background-color: #transparent;
   overflow-x: hidden; /* Disable horizontal scroll */
